@@ -1,0 +1,599 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>{07b459b4-8d76-4638-bc6d-a459ba2d616b}</ProjectGuid>
+    <avrdevice>atmega2560</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>Marlin</AssemblyName>
+    <Name>Marlin</Name>
+    <RootNamespace>Marlin</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <OverrideVtorValue>
+    </OverrideVtorValue>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress>0x20000000</RamSnippetAddress>
+    <CacheFlash>true</CacheFlash>
+    <UncachedRange />
+    <BootSegment>0</BootSegment>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.6.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=106</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal</Value>
+      <Value>../../Marlin</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/variants/mega</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=106</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal</Value>
+      <Value>../../Marlin</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/variants/mega</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/cores/arduino;D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/variants/mega;../../Marlin;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries;D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/libraries;D:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Administrator/Documents/Arduino/libraries;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/avr/;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V/utility;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>mega2560</arduino.board.name>
+        <arduino.board.desc>Arduino Mega 2560 or Mega ADK</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Mega 2560 or Mega ADK
+upload.protocol=wiring
+upload.maximum_size=258048
+upload.speed=115200
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xD8
+bootloader.extended_fuses=0xFD
+bootloader.path=stk500v2
+bootloader.file=stk500boot_v2_mega2560.hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+build.mcu=atmega2560
+build.f_cpu=16000000L
+build.core=arduino
+build.variant=mega
+runtime.ide.path=D:\arduino-1.0.6-windows\arduino-1.0.6
+build.system.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\system
+runtime.ide.version=106
+target_package=arduino
+target_platform=avr
+runtime.hardware.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware
+originalid=mega2560
+vm.platform.root.path=D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x
+ide.hint=Arduino 0023 and 1.0.x Ide
+ide.location.key=Arduino
+ide.location.ide.winreg=Arduino 1.0.x Application
+ide.location.sketchbook.winreg=Arduino 1.0.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.sketchbook.default=%MYDOCUMENTS%\arduino
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=true
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionLTEQ=149
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino10x
+location.sketchbook=C:\Users\Administrator\Documents\Arduino
+vm.core.include=arduino.h
+build.board=AVR_MEGA2560
+vm.boardsource.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino
+runtime.platform.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino
+vm.platformname.name=avr
+build.arch=AVR
+vm.runtime.compiler.showwarnings=false
+serial.port.file=COM31
+serial.port=COM31
+serial.port.num=31
+build.source.path=C:\Users\Administrator\Desktop\I3_Marlin-Marlin_v1\Marlin\Marlin.pde
+compiler.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\tools\avr\bin\
+extra.time.local=11994458
+includes= -I"D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\cores\arduino"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\variants\mega"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\LiquidCrystal"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\LiquidCrystal_I2C"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\SPI"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\U8glib"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\Wire"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\libraries"  -I"D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers"  -I"C:\Users\Administrator\Documents\Arduino\libraries"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\U8glib\utility" -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\Wire\utility"
+build.path=C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560
+build.project_name=Marlin
+build.variant.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\variants\mega
+build.core.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\cores\arduino
+archive_file=core.a
+object_file=C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\WString.cpp.o
+source_file=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\cores\arduino\WString.cpp
+build.architecture=avr
+vmresolved.compiler.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\tools\avr\bin\
+vmresolved.tools.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\tools\avr
+object_files="C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\BlinkM.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\cardreader.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\ConfigurationStore.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\LiquidCrystalRus.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Marlin.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\MarlinSerial.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Marlin_main.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\motion_control.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\planner.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Sd2Card.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdBaseFile.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdFatUtil.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdFile.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdVolume.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Servo.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\stepper.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\temperature.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\ultralcd.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\vector_3.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\watchdog.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\LiquidCrystal_I2C\LiquidCrystal_I2C.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SPI\SPI.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\U8glib.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\chessengine.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_bitmap.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_circle.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_clip.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_api.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_api_16gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_common.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_fast_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_no_en_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_port_d_wr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_ssd_i2c.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_st7920_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_st7920_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_std_sw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_sw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_t6963.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_st7920_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_st7920_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_sw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_i2c.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_io.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_null.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_cursor.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_delay.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_flipdisc_2x7.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_gprof.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ili9325d_320x240.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ks0108_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_160x80.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_240x128.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_240x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_320x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_null.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_pcd8544_84x48.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_pcf8812_96x65.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_sbn1661_122x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1306_128x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1306_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1309_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1322_nhd31oled_bw.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1322_nhd31oled_gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_bw.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_bw_new.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_gr_new.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1327_96x96_gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_64128n.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_dogm128.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_dogm132.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_lm6059.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_lm6063.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_nhd_c12832.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_nhd_c12864.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7687_c144mvgd.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7920_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7920_192x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7920_202x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_t6963_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_t6963_240x128.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_t6963_240x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_tls8204_84x48.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_uc1610_dogxl160.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_uc1701_dogs102.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_uc1701_mini12864.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_ellipse.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_font.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_font_data.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_line.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_ll_api.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_page.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb14v1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16h1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16h2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16v1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16v2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb32h1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h1f.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h8.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8v1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8v2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_rect.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_rot.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_scale.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_state.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_u16toa.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_u8toa.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_virtual_screen.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Wire\Wire.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Wire\utility\twi.c.o" 
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega2560</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>wiring</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>258048</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino10x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+        <arduino.upload.port>COM3</arduino.upload.port>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=106</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal</Value>
+      <Value>../../Marlin</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/variants/mega</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/cores/arduino</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+  <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+  <avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultCharTypeUnsigned>
+  <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>__AVR_ATmega2560__</Value>
+      <Value>ARDUINO=106</Value>
+      <Value>ARDUINO_MAIN</Value>
+      <Value>F_CPU=16000000L</Value>
+      <Value>__AVR__</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value></Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/lib/gcc/avr/4.3.2/include/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/avr/</Value>
+      <Value>d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/</Value>
+      <Value>C:/Users/Administrator/Documents/Arduino/libraries</Value>
+      <Value>D:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal/utility</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal</Value>
+      <Value>../../Marlin</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/variants/mega</Value>
+      <Value>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/cores/arduino</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize (-O1)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
+  <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
+  <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
+</AvrGccCpp>
+    </ToolchainSettings>
+    <VMSETTING_IncludePaths>D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/cores/arduino;D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/variants/mega;../../Marlin;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/LiquidCrystal_I2C/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/SPI/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/U8glib/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/Wire/utility;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries;D:/arduino-1.0.6-windows/arduino-1.0.6/hardware/arduino/libraries;D:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/Administrator/Documents/Arduino/libraries;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/include/avr/;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/avr/;d:/arduino-1.0.6-windows/arduino-1.0.6/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V;D:/arduino-1.0.6-windows/arduino-1.0.6/libraries/MB85RC16V/utility;</VMSETTING_IncludePaths>
+    <VisualMicroSettings>
+      <VisualMicroSettings>
+        <arduino.board.name>mega2560</arduino.board.name>
+        <arduino.board.desc>Arduino Mega 2560 or Mega ADK</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Mega 2560 or Mega ADK
+upload.protocol=wiring
+upload.maximum_size=258048
+upload.speed=115200
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xD8
+bootloader.extended_fuses=0xFD
+bootloader.path=stk500v2
+bootloader.file=stk500boot_v2_mega2560.hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+build.mcu=atmega2560
+build.f_cpu=16000000L
+build.core=arduino
+build.variant=mega
+runtime.ide.path=D:\arduino-1.0.6-windows\arduino-1.0.6
+build.system.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\system
+runtime.ide.version=106
+target_package=arduino
+target_platform=avr
+runtime.hardware.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware
+originalid=mega2560
+vm.platform.root.path=D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x
+ide.hint=Arduino 0023 and 1.0.x Ide
+ide.location.key=Arduino
+ide.location.ide.winreg=Arduino 1.0.x Application
+ide.location.sketchbook.winreg=Arduino 1.0.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.sketchbook.default=%MYDOCUMENTS%\arduino
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=true
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionLTEQ=149
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino10x
+location.sketchbook=C:\Users\Administrator\Documents\Arduino
+vm.core.include=arduino.h
+build.board=AVR_MEGA2560
+vm.boardsource.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino
+runtime.platform.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino
+vm.platformname.name=avr
+build.arch=AVR
+vm.runtime.compiler.showwarnings=false
+serial.port.file=COM31
+serial.port=COM31
+serial.port.num=31
+build.source.path=C:\Users\Administrator\Desktop\I3_Marlin-Marlin_v1\Marlin\Marlin.pde
+compiler.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\tools\avr\bin\
+extra.time.local=11994458
+includes= -I"D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\cores\arduino"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\variants\mega"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\LiquidCrystal"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\LiquidCrystal_I2C"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\SPI"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\U8glib"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\Wire"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\libraries"  -I"D:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\default\debuggers"  -I"C:\Users\Administrator\Documents\Arduino\libraries"  -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\U8glib\utility" -I"D:\arduino-1.0.6-windows\arduino-1.0.6\libraries\Wire\utility"
+build.path=C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560
+build.project_name=Marlin
+build.variant.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\variants\mega
+build.core.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\cores\arduino
+archive_file=core.a
+object_file=C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\WString.cpp.o
+source_file=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\arduino\cores\arduino\WString.cpp
+build.architecture=avr
+vmresolved.compiler.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\tools\avr\bin\
+vmresolved.tools.path=D:\arduino-1.0.6-windows\arduino-1.0.6\hardware\tools\avr
+object_files="C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\BlinkM.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\cardreader.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\ConfigurationStore.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\LiquidCrystalRus.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Marlin.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\MarlinSerial.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Marlin_main.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\motion_control.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\planner.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Sd2Card.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdBaseFile.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdFatUtil.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdFile.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SdVolume.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Servo.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\stepper.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\temperature.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\ultralcd.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\vector_3.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\watchdog.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\LiquidCrystal\LiquidCrystal.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\LiquidCrystal_I2C\LiquidCrystal_I2C.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\SPI\SPI.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\U8glib.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\chessengine.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_bitmap.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_circle.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_clip.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_api.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_api_16gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_common.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_fast_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_no_en_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_port_d_wr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_ssd_i2c.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_st7920_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_st7920_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_std_sw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_sw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_arduino_t6963.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_parallel.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_st7920_hw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_st7920_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_atmega_sw_spi.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_i2c.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_io.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_com_null.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_cursor.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_delay.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_flipdisc_2x7.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_gprof.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ili9325d_320x240.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ks0108_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_160x80.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_240x128.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_240x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_lc7981_320x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_null.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_pcd8544_84x48.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_pcf8812_96x65.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_sbn1661_122x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1306_128x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1306_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1309_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1322_nhd31oled_bw.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1322_nhd31oled_gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_bw.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_bw_new.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1325_nhd27oled_gr_new.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_ssd1327_96x96_gr.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_64128n.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_dogm128.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_dogm132.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_lm6059.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_lm6063.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_nhd_c12832.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7565_nhd_c12864.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7687_c144mvgd.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7920_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7920_192x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_st7920_202x32.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_t6963_128x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_t6963_240x128.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_t6963_240x64.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_tls8204_84x48.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_uc1610_dogxl160.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_uc1701_dogs102.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_dev_uc1701_mini12864.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_ellipse.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_font.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_font_data.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_line.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_ll_api.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_page.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb14v1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16h1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16h2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16v1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb16v2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb32h1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h1f.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8h8.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8v1.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_pb8v2.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_rect.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_rot.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_scale.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_state.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_u16toa.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_u8toa.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\U8glib\utility\u8g_virtual_screen.c.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Wire\Wire.cpp.o" "C:\Users\Administrator\AppData\Local\V.Micro\Arduino\Builds\Marlin\mega2560\Wire\utility\twi.c.o" 
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega2560</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>wiring</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>258048</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino10x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
+        <arduino.upload.port>COM3</arduino.upload.port>
+      </VisualMicroSettings>
+    </VisualMicroSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="cardreader.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="cardreader.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_font_data_marlin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="dogm_lcd_implementation.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="fastio.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="language.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MarlinSerial.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="MarlinSerial.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Marlin_main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="motion_control.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="motion_control.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pins.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="planner.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="planner.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sd2Card.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sd2Card.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Sd2PinMap.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdBaseFile.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdBaseFile.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatConfig.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatStructs.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatUtil.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFatUtil.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFile.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdFile.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdInfo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdVolume.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="SdVolume.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Servo.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Servo.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="speed_lookuptable.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="stepper.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="temperature.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="thermistortables.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd_implementation_hitachi_HD44780.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ultralcd_st7920_u8glib_rrd.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vector_3.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="vector_3.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="watchdog.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="watchdog.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <None Include="Marlin.ino">
+      <SubType>compile</SubType>
+    </None>
+    <Compile Include="Marlin.pde">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Visual Micro\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlinkM.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="BlinkM.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Configuration.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ConfigurationStore.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="ConfigurationStore.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Configuration_adv.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="DOGMbitmaps.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LiquidCrystalRus.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="LiquidCrystalRus.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Marlin.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="Visual Micro\.Marlin.vsarduino.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
